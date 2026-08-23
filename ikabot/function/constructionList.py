@@ -204,7 +204,7 @@ def waitForConstruction(session, city_id, final_lvl, construction_queue=None):
             construction_building["level"] + 1,
         )
         sendToBotDebug(session, msg, debugON_constructionList)
-        wait(min(30, max(5, seconds_to_wait - 300)))
+        wait(max(5, seconds_to_wait - 300))
 
     html = session.get(city_url + city_id)
     city = getCity(html)
