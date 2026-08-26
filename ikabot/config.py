@@ -22,8 +22,9 @@ isWindows = os.name == "nt"
 USE_MULTIPROCESSING_DECAPTCHA = True
 
 # Set to TRUE to enable requesting the zero-cost speedup while a building is finishing # default FALSE
-CONSTRUCTION_FREE_SPEEDUP = (os.getenv("CONSTRUCTION_FREE_SPEEDUP") or "FALSE").strip().upper() == "TRUE" 
-
+CONSTRUCTION_FREE_SPEEDUP = (os.getenv("CONSTRUCTION_FREE_SPEEDUP") or "FALSE").strip().upper() == "TRUE"
+# Max seconds to randomly wait before firing the free speedup request
+SPEEDUP_RANDOMWAIT = int(os.getenv("SPEEDUP_RANDOMWAIT") or 30)
 
 # Regional Settings
 # These environment variables can be set to match the user's browser region and
