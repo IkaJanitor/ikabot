@@ -21,6 +21,10 @@ isWindows = os.name == "nt"
 # Set to False if your environment struggles with Python multiprocessing
 USE_MULTIPROCESSING_DECAPTCHA = True
 
+# Set to TRUE to enable requesting the zero-cost speedup while a building is finishing # default FALSE
+CONSTRUCTION_FREE_SPEEDUP = (os.getenv("CONSTRUCTION_FREE_SPEEDUP") or "FALSE").strip().upper() == "TRUE" 
+
+
 # Regional Settings
 # These environment variables can be set to match the user's browser region and
 # timezone when Gameforge rejects generated blackbox tokens.
