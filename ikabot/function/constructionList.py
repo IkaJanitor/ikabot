@@ -141,7 +141,7 @@ def tryFreeBuildingSpeedup(session, city_id, building):
     if speedup_params is None:
         return False
         
-    wait(random.randint(4, SPEEDUP_RANDOMWAIT)) # random wait
+    wait(random.randint(1, SPEEDUP_RANDOMWAIT)) # random wait
     session.post(params=speedup_params)
     return True
 
