@@ -140,7 +140,8 @@ def tryFreeBuildingSpeedup(session, city_id, building):
     speedup_params = _getFreeSpeedupParams(response, city_id, building["position"])
     if speedup_params is None:
         return False
-
+        
+    wait(random.randint(1, 30)) # random wait
     session.post(params=speedup_params)
     return True
 
