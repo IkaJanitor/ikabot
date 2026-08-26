@@ -187,7 +187,7 @@ def waitForConstruction(session, city_id, final_lvl, construction_queue=None):
         session.setStatus(status)
 
         if 0 < seconds_to_wait <= 300:
-            if tryFreeBuildingSpeedup(session, city_id, construction_building):
+            if CONSTRUCTION_FREE_SPEEDUP and tryFreeBuildingSpeedup(session, city_id, construction_building):
                 session.setStatus(status + " , free speedup sent")
                 msg = "{}: Finished {} for 0 Ambrosia".format(
                     city["cityName"], construction_building["name"]
